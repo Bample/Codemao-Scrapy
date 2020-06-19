@@ -2,11 +2,11 @@
 
 编程猫爬虫
 
-## 使用
-
+## Usage
 
 ```sh
-Codemao-Scrapy 工作室ID
+$ Codemao-Scrapy workshop <Workshop ID>
+$ Codemao-Scrapy user <User ID>
 ```
 
 ## TODO
