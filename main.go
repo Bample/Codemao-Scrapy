@@ -11,5 +11,7 @@ func main() {
 		NotifyWorkshopInfo(GetWorkshopInfo(os.Args[2]))
 	case "user":
 		NotifyUserInfo(GetUserInfo(os.Args[2]))
+	case "server":
+		StartServer(os.Args[2])
 	}
 }

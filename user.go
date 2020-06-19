@@ -3,8 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
-	"net/http"
 )
 
 // User type.
@@ -18,9 +16,7 @@ type User struct {
 
 // GetUserInfo is a function.
 func GetUserInfo(id string) User {
-	resp, _ := http.Get("https://api.codemao.cn/api/user/info/detail/" + id)
-	defer resp.Body.Close()
-	pageBytes, _ := ioutil.ReadAll(resp.Body)
+	pageBytes := Scrap("https://api.codemao.cn/api/user/info/detail/" + id)
 	data := make(map[string]interface{})
 	json.Unmarshal(pageBytes, &data)
 	userInfo := data["data"].(map[string]interface{})["userInfo"].(map[string]interface{})["user"].(map[string]interface{})
