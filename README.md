@@ -5,8 +5,12 @@
 ## Usage
 
 ```sh
+# Get a workshop's information.
 $ Codemao-Scrapy workshop <Workshop ID>
+# Get an user's information.
 $ Codemao-Scrapy user <User ID>
+# Start an API Server
+$ Codemao-Scrapy server <port>
 ```
 
 ## TODO
@@ -14,4 +18,5 @@ $ Codemao-Scrapy user <User ID>
 - [x] Workshop
 - [x] User
 - [ ] Work
-- [ ] Http proxy
+- [x] API Server
+- [ ] Online GUI
